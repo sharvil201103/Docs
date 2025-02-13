@@ -17,6 +17,7 @@ import FontFamily from '@tiptap/extension-font-family'
 import TextStyle from '@tiptap/extension-text-style'
 import {Color} from '@tiptap/extension-color'
 import Highlight from '@tiptap/extension-highlight'
+import TextAlign from '@tiptap/extension-text-align'
 
 import { useEditorStore } from '@/store/use-editor-store'
 
@@ -68,6 +69,9 @@ export const Editor = () => {
               multicolor:true,
             }),
             Image,
+            TextAlign.configure({
+              types: ["heading","paragraph"]
+            }),
             ImageResize,
             Table,
             TableCell,
