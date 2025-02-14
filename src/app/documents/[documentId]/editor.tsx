@@ -19,7 +19,7 @@ import {Color} from '@tiptap/extension-color'
 import Highlight from '@tiptap/extension-highlight'
 import TextAlign from '@tiptap/extension-text-align'
 import { FontsizeExtension } from '@/extensions/font-size'
-
+import { LineHeightExtension } from '@/extensions/line-height'
 import { useEditorStore } from '@/store/use-editor-store'
 
 
@@ -82,6 +82,10 @@ export const Editor = () => {
             FontFamily,
             TextStyle,
             FontsizeExtension,
+            LineHeightExtension.configure({
+              types: ["heading","paragraph"],
+              defaultLineHeight: "normal"
+            }),
             TaskItem.configure({
                 nested: true
             }),
